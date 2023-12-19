@@ -1,0 +1,6 @@
+FROM us-docker.pkg.dev/spinnaker-community/docker/clouddriver:5.81.0-dev-release-1.31.x-5116a2e46-202308281415-unvalidated-slim
+ENV PATH "/usr/bin/:$PATH"
+USER root
+RUN apk --no-cache add python3 py3-pip
+RUN pip install --upgrade awscli
+USER spinnaker
